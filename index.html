@@ -19,7 +19,7 @@
     <main>
         <div class="container text-center mt-5">
          
-                <input id="search-input" type="text" class="form-control w-75 d-inline" placeholder="Search for your phone">
+                <input id="search-input" type="text" class="form-control w-50 d-inline" placeholder="Search for your phone">
                 <button onclick="searchPhone()" class="btn btn-primary">Search</button>
             
         </div>
@@ -29,6 +29,13 @@
             </div>
             <div>
                 <h3 id="warning" class="text-warning text-center d-none">No Phone Found. Try again</h3>
+            </div>
+        </section>
+        <section id="loading" class="d-none">
+            <div style="height: 300px;" class="d-flex justify-content-center align-items-center">
+                <div class="spinner-border text-success" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
             </div>
         </section>
     </main>

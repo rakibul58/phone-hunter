@@ -10,10 +10,9 @@ const showData = (phones) => {
   const parentDiv = document.getElementById("parent-div");
   parentDiv.textContent = '';
   phones = phones.slice(0,12);
-  if(phones.length==0)
-  {
+  if (phones.length == 0) {
     document.getElementById('warning').classList.remove('d-none');
-  }else{
+  } else {
     document.getElementById('warning').classList.add('d-none');
   }
   phones.forEach((phone) => {
@@ -34,14 +33,28 @@ const showData = (phones) => {
         `;
     parentDiv.appendChild(newDiv);
   });
-};
+  toggle(false);
+}
 
 const searchPhone = () => {
 
+  toggle(true);
   const searchedElement = document.getElementById('search-input');
   const searchedText = searchedElement.value;
   loadPhone(searchedText);
   searchedElement.value = '';
+
+
+}
+
+const toggle = isLoading => {
+
+  if (isLoading) {
+    document.getElementById('loading').classList.remove('d-none');
+  }
+  else {
+    document.getElementById('loading').classList.add('d-none');
+  }
 
 }
 
